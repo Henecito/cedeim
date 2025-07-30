@@ -4,7 +4,7 @@ import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/cedeim">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
