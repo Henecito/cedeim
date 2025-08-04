@@ -49,6 +49,22 @@ export default function Team() {
           {selected.name}
         </motion.h1>
 
+        {/* Imagen en móvil */}
+        <div className="image-mobile">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={selected.image + "-mobile"}
+              src={selected.image}
+              alt={selected.name}
+              className="hero-img"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+            />
+          </AnimatePresence>
+        </div>
+
         <motion.div
           className="section-title"
           initial={{ opacity: 0 }}
@@ -111,10 +127,11 @@ export default function Team() {
         </div>
       </div>
 
+      {/* Imagen en escritorio */}
       <div className="image-panel">
         <AnimatePresence mode="wait">
           <motion.img
-            key={selected.image}
+            key={selected.image + "-desktop"}
             src={selected.image}
             alt={selected.name}
             className="hero-img"
