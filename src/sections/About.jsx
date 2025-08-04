@@ -11,7 +11,7 @@ export default function About() {
         muted
         playsInline
       >
-        <source src="/videos/about.mp4" type="video/mp4" />
+        <source src="./videos/about.mp4" type="video/mp4" />
         Tu navegador no soporta video HTML5.
       </video>
 
