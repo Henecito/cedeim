@@ -1,0 +1,142 @@
+/* src/sections/MissionVision.css */
+
+/* CONTENEDOR GENERAL */
+.mv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+  gap: 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* IMAGEN */
+.mv-image {
+  flex: 1 1 300px;
+  max-width: 540px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mv-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Efecto al pasar el mouse */
+.mv-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* CONTENIDO */
+.mv-content {
+  flex: 1 1 300px;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* TITULAR */
+.mv-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #007f86;
+  margin-bottom: 1.5rem;
+}
+
+/* PÁRRAFOS */
+.mv-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.mv-description em {
+  color: #007f86;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* LISTADO */
+.mv-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+
+.mv-list li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.mv-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #007f86;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mv-container {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .mv-title {
+    font-size: 2rem;
+  }
+
+  .mv-description {
+    font-size: 1rem;
+  }
+
+  .mv-content {
+    max-width: 100%;
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .mv-list li {
+    text-align: left;
+    padding-left: 1.5rem;
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .mv-image {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}
+
+/* ANIMACIONES */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

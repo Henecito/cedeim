@@ -1,22 +1,55 @@
 // src/sections/MissionVision.jsx
+import { motion } from "framer-motion";
+import "./MissionVision.css";
+import clinicaImg from "../assets/clinica.jpg";
+
 export default function MissionVision() {
   return (
-    <section style={{ padding: '4rem 2rem', backgroundColor: '#f9f9f9' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h2>Misión</h2>
-        <p>Nuestra misión es ofrecer productos y servicios de calidad que impacten positivamente en la vida de las personas.</p>
+    <section className="mv-container">
+      <motion.div
+        className="mv-image"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <img src={clinicaImg} alt="Nuestra clínica" />
+      </motion.div>
 
-        <h2>Visión</h2>
-        <p>Ser una empresa líder reconocida por su innovación, ética y compromiso con la comunidad.</p>
+      <motion.div
+        className="mv-content"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="mv-title">Comprometidos con tu bienestar</h2>
+        <p className="mv-description">
+          Desde el año <strong>2012</strong>, nuestra clínica se ha dedicado a
+          mejorar la calidad de vida de nuestros pacientes a través de un enfoque
+          integral, humano y personalizado en kinesiología, rehabilitación y
+          salud funcional.
+        </p>
 
-        <h2>Valores</h2>
-        <ul>
-          <li>Integridad</li>
-          <li>Excelencia</li>
-          <li>Colaboración</li>
-          <li>Responsabilidad</li>
+        <p className="mv-description">
+          Nos encontramos en <strong>Santiago de Chile</strong>, donde cada día
+          atendemos a personas con diferentes necesidades físicas, ayudándolas a
+          recuperar su movilidad, autonomía y confianza.
+        </p>
+
+        <p className="mv-description">
+          En nuestra clínica combinamos tecnología de vanguardia con un equipo
+          altamente capacitado y un trato cercano, porque creemos que{" "}
+          <em>la recuperación no solo es física, también es emocional</em>.
+        </p>
+
+        <ul className="mv-list">
+          <li>✔ Más de 10 años de experiencia clínica</li>
+          <li>✔ Planes personalizados y seguimiento constante</li>
+          <li>✔ Enfoque interdisciplinario en cada tratamiento</li>
+          <li>✔ Instalaciones modernas y cómodas</li>
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 }

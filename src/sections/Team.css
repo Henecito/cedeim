@@ -28,7 +28,7 @@
 }
 
 .skill-box {
-  background: #00b9c4;
+  background: #007f86;
   color: white;
   padding: 10px 15px;
   display: inline-block;
@@ -57,7 +57,7 @@
   max-height: 500px;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 127, 134, 0.5);
-  border: 5px solid #00b9c4;
+  border: 5px solid #007f86;
 }
 
 /* HEXAGON GRID */
