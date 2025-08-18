@@ -47,7 +47,7 @@ export default function Navbar() {
             <li>
               <Link
                 className={scrolled ? "link-dark" : "link-light"}
-                to="/"
+                to="//"
                 onClick={() => setMenuOpen(false)}
               >
                 Inicio
@@ -63,14 +63,23 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <a className={scrolled ? "link-dark" : "link-light"} href="#">
+              <Link
+                className={scrolled ? "link-dark" : "link-light"}
+                to="/services"
+                onClick={() => setMenuOpen(false)}
+              >
                 Servicios
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a className={scrolled ? "link-dark" : "link-light"} href="#">
+              <Link
+                className={scrolled ? "link-dark" : "link-light"}
+                to="/contact"
+                onClick={() => setMenuOpen(false)}
+              >
                 Contacto
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

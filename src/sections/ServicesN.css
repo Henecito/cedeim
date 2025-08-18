@@ -1,0 +1,63 @@
+.servicesN {
+  padding: 6rem 4rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.servicesN h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007f86;
+  margin-bottom: 3rem;
+}
+
+.servicesN-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.serviceN-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.serviceN-card:hover {
+  transform: translateY(-6px);
+}
+
+.serviceN-icon {
+  color: #c7153c;
+  margin-bottom: 1rem;
+}
+
+.serviceN-card h3 {
+  font-size: 1.4rem;
+  color: #007f86;
+  margin-bottom: 0.8rem;
+}
+
+.serviceN-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicesN {
+    padding: 4rem 2rem;
+  }
+
+  .servicesN h2 {
+    font-size: 2rem;
+  }
+
+  .serviceN-card {
+    padding: 1.5rem;
+  }
+}
