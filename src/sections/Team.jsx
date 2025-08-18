@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Team.css";
-import franciscoImg from "../assets/persona.jpg";
+import franciscoImg from "../assets/persona.JPG";
 import anaImg from "../assets/persona.jpg";
 import carlosImg from "../assets/persona.jpg";
 
